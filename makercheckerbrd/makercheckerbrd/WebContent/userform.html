@@ -1,0 +1,155 @@
+
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
+input[type=textarea],input[input=text]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color:#008CBA;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+</head>
+<body style="background-color:powderblue;">
+
+<a href="viewusers.jsp">View All Records</a><br/>
+<center>
+<form action="adduser.jsp" method="post" style="width: 500px" >
+  <div class="container">
+  <div class="dropdown">
+    <h1>REGISTER FORM</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    
+    <input type="hidden" placeholder="Enter customerId" name="customerId"  VALUE="1" required>
+     
+
+    <label for="customerCode"><b>CustomerCode</b></label>
+    <input type="text" placeholder="Enter CustomerCode" name="customerCode"   required />
+
+
+    <label for="customerName"><b>CustomerName</b></label>
+    <input type="text" placeholder="customerName" name="customerName"  required pattern="^[a-zA-Z0-9 ]*$" title="Invalid characters" >
+    
+    <label for="customerAddress1"><b>CustomerAddress1</b></label>
+    <textarea rows="2" cols="60"placeholder="CustomerAddress1" name="customerAddress1"  required></textarea>
+    
+    <label for="customerAddress2"><b>CustomerAddress2</b></label>
+    <textarea rows="2" cols="60" placeholder="CustomerAddress2" name="customerAddress2" required></textarea>
+
+    <label for="customerPinCode"><b>customerPinCode</b></label>
+    <input type="text" placeholder="CustomerPinCode" name="customerPinCode"  pattern=".{6}" title="Pin code should be 6 digits" >
+    
+    <label for="emailaddress"><b>Emailaddress</b></label>
+    <input type="text" placeholder="Emailaddress" name="emailaddress" id= " emailaddress "    pattern=  "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Invalid Email format" value="ninkalata@gmail.com" >
+
+    <label for="contactNumber"><b>ContactNumber</b></label>
+    <input type="text" placeholder="ContactNumber" name="contactNumber" required>
+    
+   <label for="primaryContactPerson"><b>PrimaryContactPerson</b></label>
+    <input type="text" placeholder="PrimaryContactPerson" name="primaryContactPerson" required />
+    
+   <!--  <label for="recordStatus"><b>RecordStatus</b></label>
+    <input type="text" placeholder="RecordStatus" name="recordStatus" required Pattern=((?:A)|(?:M)|(?:D)|(?:R)|(?:N)) title="Invalid Record Status"  /> 
+    <P><Strong> NOTE:</Strong>N=New, M=Modified, D=Deleted, A= Authorized, R=Rejected</P>--> 
+    
+  
+    
+     <label for="activeInactiveFlag"><b>ActiveInactiveFlag</b></label>
+    <select name="activeInactiveFlag" >
+      <option value="A">Active</option>
+      <option value="I">Inactive</option>
+     
+    </select>
+ 
+    
+   <!--   <label for="createDate"><b>CreateDate</b></label>
+    <input type="date" name= "createDate"/>-->
+   
+    
+  
+
+   <label for="createBy"><b>CreatedBy</b></label>
+    <input type="text" placeholder="CreatedBy" name="createBy"  value="maker" />
+    
+    <!--  <label for="modifiedDate"><b>ModifiedDate</b></label>
+    <input type="date" placeholder="DD-MMM-YYYY" name="modifiedDate"  required >-->
+    
+     <label for="modifiedBy"><b>ModifiedBy</b></label>
+    <input type="text" placeholder="modifiedBy" name="modifiedBy" required >
+    
+    <!--  <label for="authorizedDate"><b>AuthorizedDate</b></label>
+    <input type="date" placeholder="DD-MMM-YYYY" name="authorizedDate" required  
+>-->
+
+    <label for="authorizedBy"><b>AuthorizedBy</b></label>
+    <input type="text" placeholder="AuthorizedBy" name="authorizedBy"  required >
+    
+    <hr>
+    <hr>
+    
+
+    <button type="submit" class="registerbtn" value="Add User">Register</button>
+  </div>
+  </div>
+  </div>
+
+</form>
+
+</center>
+</body>
+</html>
