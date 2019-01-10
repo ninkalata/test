@@ -1,0 +1,29 @@
+CREATE TABLE temp_register (
+ customerId NUMBER(10) , 
+customerCode varchar(10) primary key ,
+ customerName varchar(30) NOT NULL,
+ customerAddress1 varchar(100) NOT NULL,
+  customerAddress2 varchar(100) ,
+  customerPinCode number(10) not null,
+emailaddress varchar(100) NOT NULL,
+contactNumber number(20) ,
+primaryContactPerson varchar(100) NOT NULL,
+recordStatus varchar(1) NOT NULL,
+activeInactiveFlag varchar(1) NOT NULL,
+createDate Date not null,
+createBy varchar(30) not null,
+modifiedDate Date not null,
+modifiedBy varchar(10) not null,
+authorizedDate Date not null,
+authorizedBy varchar(10) not null
+
+  
+) 
+
+
+SELECT* FROM temp_register;
+COMMIT;
+desc temp_register;
+DROP TABLE temp_register;
+
+truncate table temp_register;
